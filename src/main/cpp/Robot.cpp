@@ -4,6 +4,8 @@
 
 #include "Robot.h"
 
+#include "TeleopStateMachine.h"
+
 #include <iostream>
 
 #include <frc/smartdashboard/SmartDashboard.h>
@@ -15,7 +17,8 @@ void Robot::RobotInit() {
 
   controller = new frc::Joystick(0);
   drive = new DriveController();
-  tsm = new TeleopStateMachine(controller); 
+  barrel = new Barrel(); 
+  tsm = new TeleopStateMachine(controller, barrel);
 }
 
 /**

@@ -1,8 +1,9 @@
 #include "TeleopStateMachine.h"
 
-TeleopStateMachine::TeleopStateMachine(frc::Joystick *joystick_)
+TeleopStateMachine::TeleopStateMachine(frc::Joystick *joystick_, Barrel * barrel_)
 {
     joystick = joystick_;
+    barrel = barrel;
     
     current_state = States::STOP;
 }
