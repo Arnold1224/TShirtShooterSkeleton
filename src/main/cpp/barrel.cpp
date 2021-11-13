@@ -16,8 +16,8 @@ void Barrel::Slow() {
     elevation_talon->Set(-0.1);
 }
 
-void Barrel::Stop() {
-    elevation_talon->Set(-0.1);
+void Barrel::Stop_Barrel() {
+    elevation_talon->Set(0);
 }
 
 void Barrel::Up() {

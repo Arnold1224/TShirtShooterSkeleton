@@ -17,7 +17,7 @@ class Barrel
             void StateMachine();
             void Init();
             void Down();
-            void Stop();
+            void Stop_Barrel();
             void Up();
             void Slow();
             
