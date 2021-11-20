@@ -2,6 +2,8 @@
 
 #include "barrel.h"
 
+#include 'shooter.h'
+
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <frc/Joystick.h>
 
