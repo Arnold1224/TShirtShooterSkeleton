@@ -1,9 +1,9 @@
-#include 'shooter.h'
+#include "shooter.h"
 
 Shooter::Shooter()
 {
-    compressor_1 = new WPITalonSRX(1);
-    compressor_2 = new WPITalonSRX(11);
+    compressor_1 = new WPI_TalonSRX(1);
+    compressor_2 = new WPI_TalonSRX(11);
     firing_valve = new frc::Solenoid(0, 2);
     emergency_valve = new frc::Solenoid(0, 3);
 }
@@ -35,10 +35,10 @@ void Shooter::StateMachine(){
         case States::STOP:
             Stop();
             break;
-        case States::GO;
+        case States::GO:
             Go();
             break;
-        case States::SHOOT;  
+        case States::SHOOT: 
             Shoot();
             break;
         case States::INIT:

@@ -1,10 +1,14 @@
 #pragma once
+#include <ctre/Phoenix.h>
+#include <frc/WPILib.h>
+#include <frc/smartdashboard/SmartDashboard.h>
+#include <chrono>
 
 class Shooter
 {
     private:
-        WPITalonSRX*compressor_1;
-        WPITalonSRX*compressor_2;
+        WPI_TalonSRX*compressor_1;
+        WPI_TalonSRX*compressor_2;
         frc::Solenoid*firing_valve;
         frc::Solenoid*emergency_valve;
 
@@ -19,7 +23,7 @@ class Shooter
             void Init();
             void Stop();
             void Shoot();
-            Void Go();
+            void Go();
             void StateMachine();
             void ResetCounter();
 };
